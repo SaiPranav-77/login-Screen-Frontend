@@ -17,7 +17,7 @@ function ResetPassword() {
 
     const email = sessionStorage.getItem('resetEmail');
 
-    const response = await fetch('http://localhost:5005/forgot-password', {
+    const response = await fetch('https://login-screens-backend.onrender.com/forgot-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, newPassword, otp }),

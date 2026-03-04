@@ -10,7 +10,7 @@ function ForgotPasswordEmail() {
   e.preventDefault();
 
   try {
-    const response = await fetch("http://localhost:5005/check-user", {
+    const response = await fetch("https://login-screens-backend.onrender.com/check-user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
