@@ -1,0 +1,67 @@
+.sale-title {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.welcome-text {
+  color: #555;
+}
+
+/* Product Cards */
+
+.product-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Title */
+
+.product-title {
+  font-weight: 600;
+}
+
+/* Price */
+
+.product-price {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Buy Button */
+
+.buy-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Logout */
+
+.logout-btn {
+  background: #ff4b5c;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.logout-btn:hover {
+  background: #e63946;
+}

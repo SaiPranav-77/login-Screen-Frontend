@@ -1,0 +1,94 @@
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #b8c4d6;
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glassmorphism Card */
+
+.login-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+  transition: 0.3s;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+
+.login-title {
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Inputs */
+
+.login-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+}
+
+.login-input:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Button */
+
+.login-btn {
+  width: 100%;
+  background: white;
+  color: #667eea;
+  border: none;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: scale(1.05);
+  background: #f1f1f1;
+}
+
+/* Links */
+
+.login-links {
+  margin-top: 15px;
+}
+
+.login-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
