@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -51,6 +52,56 @@ function Register() {
   return (
     <div className="container d-flex justify-content-center align-items-center min-vh-100">
       <div className="card p-4 shadow" style={{ width: '30rem' }}>
+=======
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+function Register() {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    gender: "",
+    dob: "",
+    email: "",
+    phone: "",
+    password: "",
+  });
+  const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const key = e.target.name;
+    const value = e.target.value;
+    setForm({ ...form, [key]: value });
+  };
+
+  const handleSubmit = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      return alert("Invalid email format");
+    } else {
+      const response = await fetch("http://localhost:5005/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify( form ),
+      });
+
+      const result = response.json();
+
+      if (response.ok) {
+        setMessage("User registered. Redirecting to login...");
+        setTimeout(() => navigate("/"), 3000);
+      } else {
+        setMessage(result.message || "Error creating user");
+      }
+    }
+  };
+
+  return (
+    <div className="container d-flex justify-content-center align-items-center min-vh-100">
+      <div className="card p-4 shadow" style={{ width: "30rem" }}>
+>>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04
         <h3 className="text-center mb-4">Register</h3>
 
         <div className="row mb-3">
@@ -126,9 +177,26 @@ function Register() {
         <button className="btn btn-success w-100" onClick={handleSubmit}>
           Register
         </button>
+<<<<<<< HEAD
       </div>
     </div>
   )
 }
 
 export default Register
+=======
+        {message && (
+          <div
+            style={{ marginBottom: "0px", marginTop: "10px" }}
+            className="alert alert-info"
+          >
+            {message}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default Register;
+>>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04

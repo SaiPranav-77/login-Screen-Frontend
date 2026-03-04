@@ -1,4 +1,5 @@
 // Home.jsx
+<<<<<<< HEAD
 import "./Home.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -43,8 +44,32 @@ const Home = () => {
           Logout
         </button>
       </div>
+=======
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const Home = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('currentUser');
+    navigate('/'); // Redirect to login
+  };
+
+  // Retrieve user from storage
+  const user = localStorage.getItem('currentUser');
+
+  return (
+    <div className="d-flex justify-content-center align-items-center vh-100 flex-column">
+      <h2 className="mb-3">Welcome, {user || 'User'}!</h2>
+      <button onClick={handleLogout} className="btn btn-danger">Logout</button>
+>>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+>>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04

@@ -23,7 +23,11 @@ function ResetPassword() {
       body: JSON.stringify({ email, newPassword, otp }),
     });
 
+<<<<<<< HEAD
     const result = await response.json();
+=======
+    const result = response.json();
+>>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04
 
     if (response.ok) {
       setMessage('Password updated. Redirecting to login...');
