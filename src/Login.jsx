@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import './Login.css'
+import './login.css'
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
