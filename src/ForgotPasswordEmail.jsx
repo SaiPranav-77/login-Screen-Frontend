@@ -6,8 +6,6 @@ function ForgotPasswordEmail() {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-
-<<<<<<< HEAD
  const handleSendOTP = async (e) => {
   e.preventDefault();
 
@@ -38,19 +36,6 @@ function ForgotPasswordEmail() {
     setMessage("Server error");
   }
 };
-=======
-  const handleSendOTP = async (e) => {
-    e.preventDefault();
-
-    // Simulate sending OTP
-    sessionStorage.setItem('resetEmail', email);
-    setMessage('OTP sent to email. Default OTP is 1234');
-
-    setTimeout(() => {
-      navigate('/reset-password');
-    }, 1500);
-  };
->>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
