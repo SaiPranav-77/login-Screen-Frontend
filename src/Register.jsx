@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -101,7 +100,6 @@ function Register() {
   return (
     <div className="container d-flex justify-content-center align-items-center min-vh-100">
       <div className="card p-4 shadow" style={{ width: "30rem" }}>
->>>>>>> 71f43f6fdbd43ea14875313f91053d849e719e04
         <h3 className="text-center mb-4">Register</h3>
 
         <div className="row mb-3">
@@ -177,14 +175,12 @@ function Register() {
         <button className="btn btn-success w-100" onClick={handleSubmit}>
           Register
         </button>
-<<<<<<< HEAD
       </div>
     </div>
   )
 }
 
 export default Register
-=======
         {message && (
           <div
             style={{ marginBottom: "0px", marginTop: "10px" }}
