@@ -1,6 +1,6 @@
 // Home.jsx
 <<<<<<< HEAD
-import "./Home.css";
+import "./home.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
